@@ -1,0 +1,83 @@
+package HomeWork1;
+
+public class Store  {
+
+	String store_name;
+	int rent;
+	
+	public Store(String store_name, int rent) {
+		this.store_name = store_name;
+		this.rent = rent;
+		}
+
+	public int getRent() {
+		return rent;
+	}
+
+	public void setRent(int rent) {
+		this.rent = rent;
+	}
+
+	public String getStore_name() {
+		return store_name;
+	}
+}
+
+
+
+
+
+public class FlowerStore extends Store  {
+	
+	int orders_nums;
+	
+	public FlowerStore(String store_name, int rent) {
+		super(store_name, rent);
+	}
+
+	public int getOrders_nums() {
+		return orders_nums;
+	}
+
+	public void setOrders_nums(int orders_nums) {
+		this.orders_nums = orders_nums;
+	}
+
+	@Override
+	public String toString() {
+		return "FlowerStore [orders_nums=" + orders_nums + ", store_name=" + store_name + ", rent=" + rent + "]";
+	}
+
+}
+
+
+public class BookStore extends Store {
+	
+	int book_numbers;
+
+	public BookStore(String store_name, int rent) {
+		super(store_name, rent);
+	}
+
+	public int getBook_numbers() {
+		return book_numbers;
+	}
+
+	public void setBook_numbers(int book_numbers) {
+		this.book_numbers = book_numbers;
+	}
+
+}
+
+
+import java.util.ArrayList;
+
+public class Mall {
+
+	public static void main(String[] args, String zer) {
+		
+		ArrayList<Store > arr = new ArrayList<Store>();
+		arr.add(new FlowerStore(zer, 2000));
+	}
+
+}

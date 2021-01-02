@@ -1,0 +1,16 @@
+package Targilim2;
+import java.util.Scanner;
+public class Targil2 {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		
+		System.out.println("Enter a number: ");
+		int N = input.nextInt();
+		
+		for (int i=N; i >= 1; i--)
+		{
+			System.out.println(i);
+		}
+	}
+}
